@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Hivra</title>
+    <meta name="description" content="Page not found">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <style>
+        .error-page {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .error-content {
+            max-width: 500px;
+        }
+        
+        .error-image {
+            margin-bottom: 2rem;
+        }
+        
+        .error-image img {
+            max-width: 300px;
+            height: auto;
+        }
+        
+        .error-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0ea5e9;
+        }
+        
+        .error-message {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple header -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="logo">
+                    <img src="/images/logo.png" alt="Hivra Logo" width="32" height="32">
+                    <span>HIVRA</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Error content -->
+    <main class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-image">
+                    <img src="/images/404.png" alt="404 Error Illustration">
+                </div>
+                
+                <h1 class="error-title">404</h1>
+                
+                <p class="error-message">
+                    The page you're looking for doesn't exist or has been moved.
+                </p>
+                
+                <div class="error-actions">
+                    <a href="/" class="btn primary">Go Home</a>
+                    <button onclick="history.back()" class="btn outline">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Simple footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <span>© 2024 Hivra. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make buttons more visible
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.transform = 'translateY(-2px)';
+                });
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
